@@ -1,0 +1,65 @@
+<ion-header-bar align-title="center">
+  <h1 class="title">购物车</h1>
+  <button
+    ng-click="toggleEditStatus()"
+    class="button button-clear button-dark">
+    {{editText}}
+  </button>
+</ion-header-bar>
+
+<ion-content class="has-header has-footer">
+
+  <!-- 列表--> 
+
+  <div ng-if="cart.length > 0"
+       class="list list-inset">
+    <div
+      ng-repeat="dish in cart"
+      class="item">
+      <div class="row">
+        <div class="col">
+          <img ng-src="img/{{dish.img_sm}}" alt=""/>
+        </div>
+        <div class="col" ng-show="editEnanbled">
+          <p>{{dish.name}}</p>
+          <p>{{dish.price+"×"+dish.dishCount}}</p>
+        </div>
+        <div class="col" ng-hide="editEnanbled">
+          <button
+            ng-click="minusFromCart($index)">
+            -
+          </button>
+          <span>{{dish.dishCount}}</span>
+          <button
+            ng-click="plusToCart($index)">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="text-right">
+        <p>合计：{{sumAll()}}</p>
+        <button
+          ng-click="saveAndJump()"
+          class="button button-small button-balanced">
+          立即下单
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div ng-if="cart.length == 0">
+    <button
+      ng-click="jump('main')"
+      class="button button-block button-balanced">
+      购物车是空的，去逛逛吧
+    </button>
+  </div>
+
+
+
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+    <header>
+        <div id="head-bg">
+            <img src="img/logv2-tuniu.png" alt=""/>
+            <p>欢迎注册</p>
+        </div>
+    </header>
+    <section>
+        <div id="main-top">
+            <span></span>
+            <a href="login.html">登录</a>
+            <p>已有途牛账号了</p>
+        </div>
+        <div id="main-reg">
+            <p>手机注册</p>
+            <div class="reg-content">
+                <div class="step"></div>
+                <form action="data/register.php" method="post">
+                    <ul>
+                        <li>
+                            手机号码:&nbsp;&nbsp;<input type="text" id="uname" name="uname" placeholder="请输入手机号码">
+                            <i class="error">* 您输入的手机号码格式不正确</i>
+                        </li>
+
+                        <li>
+                            密码:&nbsp;&nbsp;<input type="password" id="upwd" name="upwd" placeholder="请输入密码">
+                            <i class="error">* 您输入的密码长度应为6-12位</i>
+                        </li>
+                        <li>
+                            验证码:&nbsp;&nbsp;<input type="text" id="input" placeholder="验证码不区分大小写">
+                            <input type="button" id="code" onclick="createCode()"/>
+                            <i class="error">* 验证码输入错误</i>
+                        </li>
+                        <li>
+                            邀请码:&nbsp;&nbsp;<input type="text" id="recNumber" name="recNumber" placeholder="推荐人手机号码">
+                            <i class="error">* 您输入的手机号码格式不正确</i>
+                        </li>
+                        <li class="agree">
+                            <input type="checkbox" id="chk" >同意
+                            <a href="#">途牛会员协议</a>
+                            <span>并且愿意接受旅游咨询免费信息</span>
+                        </li>
+                    </ul>
+                </form>
+
+                <div class="next-step" id="bt-register" disabled>同意并注册</div>
+            </div>
+        </div>
+        <div id="hint">注册成功，页面将在3秒后跳转至登录页...</div>
+    </section>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

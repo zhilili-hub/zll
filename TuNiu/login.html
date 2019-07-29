@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <header>
+        <div id="head">
+            <img src="img/logv2-tuniu.png" alt="head"/>
+        </div>
+    </header>
+    <section>
+        <div id="main">
+            <div id="login-box">
+                <form action="data/login.php" method="post">
+                    <ul>
+                        <li class="regTxt">
+                            <h4>账户登陆</h4>
+                        </li>
+                        <li>
+                            用户名：<input type="text" placeholder="请输入登陆手机号" id="uname" name="uname"/>
+                            <p class="error">* 您输入的手机号码格式不正确</p>
+                        </li>
+                        <li>
+                            密码：<input type="password" placeholder="请输入登陆密码" id="upwd" name="upwd"/>
+                            <p class="error p2">* 您输入的密码长度应为6-12位</p>
+                        </li>
+                        <li class="button1">
+                            <input type="checkbox" id="self-login"/>两周内自动登陆
+                        </li>
+                        <li class="button2">
+                            <input type="button" value="登录" id="login-btn"/>
+                        </li>
+                        <li>
+                            <a href="#">新用户送礼</a>
+                            <a href="register.html"><i>立即注册&gt;</i></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="hint"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-header has-footer">
+
+  <div ng-if="submitResult.length == 0" class="list list-inset">
+    <!-- 名称-->
+    <label class="item item-input">
+      <span class="input-label">用户名</span>
+      <input type="text"
+             ng-model="order.user_name"
+             placeholder="输入用户名"/>
+    </label>
+    <!-- 手机号-->
+    <label class="item item-input">
+      <span class="input-label">联系电话</span>
+      <input type="text"
+             ng-model="order.phone"
+             placeholder="输入手机号"/>
+    </label>
+    <!-- 住址-->
+    <label class="item item-input">
+      <span class="input-label">送餐地址</span>
+      <textarea
+        ng-model="order.addr"
+        ></textarea>
+    </label>
+    <!-- 性别-->
+    <ion-list>
+      <ion-radio
+        ng-model="order.sex"
+        value="1" name="sex">
+        男
+      </ion-radio>
+      <ion-radio
+        ng-model="order.sex"
+        value="2" name="sex">
+        女
+      </ion-radio>
+    </ion-list>
+
+    <button
+      ng-click="submitOrder()"
+      class="button button-balanced button-block">
+      提交订单
+    </button>
+
+  </div>
+
+  <div class="list list-inset" ng-if="submitResult.length > 0"
+    >
+    <div class="card">
+      <div class="item">
+        <p >
+          {{submitResult}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,114 @@
+
+header,section{
+    width:100%;
+}
+a{
+    color:#666;
+    text-decoration: none;
+    font-size: 12px;
+}
+#head{
+    width:1200px;
+    height:100px;
+    margin:0 auto;
+}
+#head>img{
+    margin-top:10px;
+}
+section{
+    background: url(img/niupinzhi.jpg) no-repeat center;
+    height:560px;
+}
+#main{
+    width:1200px;
+    height:500px;
+    margin: 0 auto;
+}
+#login-box{
+    width:400px;
+    height:410px;
+    background: #fff;
+    float:right;
+    margin:67px;
+}
+#login-box ul{
+    list-style: none;
+    padding-top: 5px;
+}
+#login-box ul>li{
+    width:300px;
+    height:65px;
+    margin:10px;
+}
+#login-box ul>li>input{
+    width:232px;
+    height:30px;
+}
+#login-box ul>li>p{
+    font-size: 12px;
+    color:#E4393C;
+    margin-left: 67px;
+    margin-top:2px;
+}
+#login-box ul>li>p.p2{
+    margin-left:53px;
+}
+#login-box ul>li.regTxt{
+    background: #22C231;
+    text-align: center;
+    height:45px;
+    line-height: 45px;
+    margin-bottom:45px;
+}
+#login-box ul>li:nth-child(3){
+    margin-left:25px;
+}
+#login-box ul>li:nth-child(4){
+    font-size: 12px;
+    margin-left: 73px;
+}
+#login-box ul>li:nth-child(4)>input{
+    width:15px;
+    height:15px;
+    position: relative;
+    top:3px;
+}
+#login-box ul>li.button1{
+    margin-bottom: 0;
+    margin-top:0;
+    height:40px;
+}
+#login-box ul>li.button2{
+    margin-left:50px;
+    margin-bottom:15px;
+    margin-top:0;
+    height:40px;
+}
+#login-box ul>li:last-child{
+    margin-left:30px;
+    position: relative;
+    top:-15px;
+}
+#login-box ul>li:last-child>a:first-child{
+    float:left;
+    margin-left: 20px;
+}
+#login-box ul>li:last-child>a:last-child{
+    float:right;
+    margin-right: 47px;
+}
+#login-btn{
+    margin-top:5px;
+}
+#hint{
+    border:1px solid #333;
+    background: #CF5EB1;
+    color:#fff;
+    width:330px;
+    height:50px;
+    position: fixed;
+    top:20%;
+    left:35%;
+    text-align: left;
+    display: none;
+}
